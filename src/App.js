@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(){
+  let title = "React Course";
+  let bgClass = "bg-danger";
+
+  let isHeading = true;
+  let size = 24;
+  return(
+    <>
+    <div className={isHeading ? "bg-danger":""}>
+      Hello React World
+      <p style={{color:"yellow", fontSize:size+""}}>{1+1}</p>
+      <Header />
     </div>
-  );
+    </>
+  )
 }
-
 export default App;

@@ -1,0 +1,4 @@
+To create a component in react, we can create a function which returns html and is exported as default, then it allows us to use the function as a tag anywhere.
+
+
+JSX - JavaScript XML
