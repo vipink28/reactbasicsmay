@@ -1,4 +1,7 @@
 import Header from "./components/Header";
+import ReactState from "./components/ReactState";
+
+// import { func1 } from './components/abc';
 
 function App(){
   let title = "React Course";
@@ -9,10 +12,7 @@ function App(){
   return(
     <>
     <div className={isHeading ? "bg-danger":""}>
-      Hello React World
-      <p style={{color:"yellow", fontSize:size+""}}>{1+1}</p>
-      <Header />
-      helo
+   <ReactState />
     </div>
     </>
   )
