@@ -19,6 +19,14 @@ function ReactState() {
         })
     }
 
+    const deleteStudent=(id)=>{
+        // array.filter()
+        const filteredArray = studentData.filter((item)=>{
+            return item.id !== id
+        })
+        setStudentData(filteredArray);
+    }
+
     return (
         <div>
             <h1>{title}</h1>
@@ -40,6 +48,7 @@ function ReactState() {
                                     <td>{item.name}</td>
                                     <td>{item.fees}</td>
                                     <td>{item.course}</td>
+                                    <td><button onClick={()=>{deleteStudent(item.id)}}>Delete</button></td>
                                 </tr>
                             )
                         })
