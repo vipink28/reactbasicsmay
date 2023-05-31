@@ -10,9 +10,43 @@ function ReactState() {
     const [title, setTitle] = useState("React State");
     const [studentData, setStudentData]=useState(initialStudentList);
     
+    const updateStudent=()=>{
+        setStudentData((prev)=>{
+            return [
+                ...prev,
+                {id: 6, name: "Ravi", fees: 34000, course: "Digital Marketing"}
+            ]
+        })
+    }
+
     return (
         <div>
             <h1>{title}</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Name</td>
+                        <td>Fees</td>
+                        <td>Course</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        studentData.map((item, index)=>{
+                            return (
+                                <tr key={item.id}>
+                                    <td>{item.id}</td>
+                                    <td>{item.name}</td>
+                                    <td>{item.fees}</td>
+                                    <td>{item.course}</td>
+                                </tr>
+                            )
+                        })
+                    }
+                </tbody>
+            </table>
+            <button onClick={updateStudent}>Update</button>
         </div>
     );
 }
