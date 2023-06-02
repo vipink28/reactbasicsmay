@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import StudentRow from './StudentRow';
 function ReactState() {
     const  initialStudentList = [
         {id: 1, name: "Shubham", fees: 25000, course: "Python"},
@@ -43,13 +44,7 @@ function ReactState() {
                     {
                         studentData.map((item, index)=>{
                             return (
-                                <tr key={item.id}>
-                                    <td>{item.id}</td>
-                                    <td>{item.name}</td>
-                                    <td>{item.fees}</td>
-                                    <td>{item.course}</td>
-                                    <td><button onClick={()=>{deleteStudent(item.id)}}>Delete</button></td>
-                                </tr>
+                              <StudentRow key={item.id} item={item} deleteStudent={deleteStudent}/>
                             )
                         })
                     }
