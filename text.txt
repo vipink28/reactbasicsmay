@@ -2,3 +2,4 @@ To create a component in react, we can create a function which returns html and 
 
 
 JSX - JavaScript XML
+
